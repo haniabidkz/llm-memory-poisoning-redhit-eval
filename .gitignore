@@ -1,6 +1,36 @@
+# python
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+*.egg-info/
 .venv/
+venv/
+
+# secrets / local config
+.env
+.env.*
+!.env.example
+
+# model weights and caches
 models/
+hf_cache/
+.cache/
+*.safetensors
+*.bin
 *.gguf
+*.pt
+*.pth
+*.onnx
+
+# fetched third party source (see third_party/redhit/fetch_redhit.sh)
+third_party/redhit/src/
+
+# run outputs
+outputs/
+*.log
+
+# local notes
+PROGRESS.md
+
+.DS_Store
+.vscode/
+.idea/
