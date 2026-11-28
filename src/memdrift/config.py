@@ -15,7 +15,7 @@ except ImportError:  # python-dotenv is optional
 class ModelConfig:
     backend: str = "hf"
     model_name: str = "Qwen/Qwen2.5-0.5B-Instruct"
-    dtype: str = "bfloat16"
+    dtype: str = "float32"  # bf16 halves RAM but greedy output drifted between runs
     max_new_tokens: int = 128
     seed: int = 1373
     base_url: str | None = None
